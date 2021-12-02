@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-do-List Weihnachten</title>
+    <link rel="stylesheet" href="lib/css/style.css" />
+  </head>
+
+  <body>
+    <div id="taskApp">
+      <h1>To-do-List Weihnachten</h1>
+
+      <p>
+        <label for="newTask">Weitere Aufgaben</label>
+        <input
+          type="text"
+          id="newTask"
+          v-model="newTask"
+          @keyup.enter="taskAdd()"
+        />
+        <button class="added" @click="taskAdd()">Hinzufügen</button>
+      </p>
+      <h2>
+        Alle Aufgaben
+        <span class="mask-num">{{ alltasks.length }}</span>
+      </h2>
+      <ul>
+        <li
+          v-for="(task, index) in alltasks"
+          :class="{ 'finished' : task.done}"
+        >
+          <p>{{task.description}}</p>
+          <button class="doneChange" @click="doneChange(index)">
+            &#10003;
+          </button>
+          <button class="deleteEl" @click="deleteEl(index)">x</button>
+        </li>
+      </ul>
+      <h2>
+        Noch tun
+        <span class="mask-num">{{ open.length }}</span>
+      </h2>
+      <ul>
+        <li class="open" v-for="task in open">{{task.description}}</li>
+      </ul>
+      <h2>
+        Abgeschlossen
+        <span class="mask-num">{{ completed.length }}</span>
+      </h2>
+      <ul>
+        <li class="done" v-for="task in completed">{{task.description}}</li>
+      </ul>
+    </div>
+    <script src="lib/js/vue.js"></script>
+    <script src="lib/js/app.js"></script>
+  </body>
+</html>

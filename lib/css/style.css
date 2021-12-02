@@ -1,0 +1,71 @@
+body {
+  font: 100% sans-serif;
+}
+#taskApp {
+  padding: 1rem;
+  background-color: rgb(108, 250, 243);
+}
+
+h2,
+h1 {
+  font-size: 100%;
+}
+label {
+  display: block;
+}
+input {
+  background-color: #e9ec2f;
+}
+.added {
+  background-color: #38068a;
+  color: #e2eaf3;
+}
+ul {
+  max-width: 22rem;
+  list-style: none;
+  padding: 20px;
+  border-radius: 4px;
+  border: #38068a 2px solid;
+  background-color: rgb(46, 3, 82);
+}
+li {
+  padding: 5px;
+  border-radius: 4px;
+  border: #38068a 2px solid;
+  margin: 5px 0px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(206, 171, 235);
+}
+li p {
+  margin: auto;
+}
+li button {
+  border-radius: 4px;
+  color: rgb(244, 245, 231);
+  margin: 2px;
+}
+h2 .mask-num {
+  border-radius: 20px;
+  border: 2px solid #2a2f36;
+  color: #2a2f36;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+
+.doneChange {
+  margin-left: auto;
+}
+.deleteEl {
+  background-color: orange;
+}
+.doneChange {
+  background-color: #ff4112;
+}
+.finished .doneChange {
+  background-color: #1c89ff;
+}
+.finished p {
+  text-decoration: line-through;
+}
